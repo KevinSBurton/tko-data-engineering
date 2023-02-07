@@ -1,5 +1,5 @@
 snowsql_config_path = "~/.snowsql/config"
-snowsql_connection_name = "dev"
+snowsql_connection_name = "se_dedemo"
 
 [default]
 input_parameters = "()"
@@ -10,8 +10,8 @@ handler = "app.main"
 execute_as_caller = true
 
 [dev]
-database = "HOL_DB"
-schema = "HARMONIZED"
-warehouse = "HOL_WH"
-role = "HOL_ROLE"
+database = "hol_db"
+schema = "harmonized"
+role = "hol_role"
+warehouse = "hol_wh"
 overwrite = true

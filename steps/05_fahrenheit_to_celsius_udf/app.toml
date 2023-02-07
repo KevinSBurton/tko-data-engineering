@@ -1,5 +1,5 @@
 snowsql_config_path = "~/.snowsql/config"
-snowsql_connection_name = "dev"
+snowsql_connection_name = "se_dedemo"
 
 [default]
 input_parameters = "(temp_f float)"
@@ -9,9 +9,15 @@ name = "fahrenheit_to_celsius_udf"
 handler = "app.main"
 execute_as_caller = true
 
-[dev]
+[se_dedemo]
 database = "HOL_DB"
 schema = "ANALYTICS"
-warehouse = "HOL_WH"
 role = "HOL_ROLE"
+warehouse = "HOL_WH"
 overwrite = true
+
+[dev]
+database = "hol_db"
+schema = "analytics"
+role = "hol_role"
+warehouse = "hol_wh"

@@ -51,13 +51,14 @@ def get_snowpark_session() -> Session:
 # TODO: It would be nice to get rid of this entirely and always use creds.json but
 # need to update snowcli to make that happen
 def get_snowsql_config(
-    connection_name: str = 'dev',
+    #connection_name: str = 'dev',
+    connection_name: str = 'se_dedemo',
     config_file_path: str = os.path.expanduser('~/.snowsql/config'),
 ) -> dict:
     import configparser
 
     snowsql_to_snowpark_config_mapping = {
-        'account': 'account',
+        'accountname': 'account',
         'username': 'user',
         'password': 'password',
         'rolename': 'role',
